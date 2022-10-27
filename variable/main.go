@@ -32,7 +32,7 @@ func main() {
 	a = 10
 	b = 20
 	c = 30
-	result := a + b + c
+	result := a + b + c // Dynamiclly type assigined
 	fmt.Println("The sum of a,b,c is  = ", result)
 
 	// type casting
@@ -40,7 +40,7 @@ func main() {
 	r := float64(i) + j
 	fmt.Println(r)
 
-	v := pass_value_function("Amam", 30)
+	v := pass_value_function("Amam", 30) // Dynamiclly type assigined
 	fmt.Println(v)
 
 	fmt.Println()
