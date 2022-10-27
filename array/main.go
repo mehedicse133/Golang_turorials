@@ -34,6 +34,26 @@ func main() {
 	num = append(num, 5)
 	num = append(num, 6)
 	fmt.Println(num)
+	fmt.Println()
+
+	// array print using index
+	fmt.Println(num[0])
+	fmt.Println(num[1])
+	fmt.Println(num[2])
+	fmt.Println()
+
+	// arry print using loop
+	for i := 0; i < len(num); i++ {
+		fmt.Println(num[i])
+	}
+	fmt.Println()
 	fmt.Println("Length of num arrry is:", len(num))
+
+	//Update arry value
+	fmt.Println("Befor update the arry list is :", num)
+	// update arry using index
+	num[2] = 20
+	num[4] = 40
+	fmt.Println("After update index 2 and 4 value array list is :", num)
 
 }
