@@ -93,4 +93,5 @@ func else_if_conition(str string) {
 	}
 	fmt.Println(count)
 	fmt.Println(len(m_volume))
+	fmt.Printf("the type ost s : %T", s)
 }
