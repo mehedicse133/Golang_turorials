@@ -18,19 +18,27 @@ func main() {
 	var student []string
 	// var firstname, lastname string
 
-	for i := 0; i < 2; i++ {
+	fmt.Println("Enter how many student you take input:")
+	var num_student int
+	fmt.Scan(&num_student)
+
+	for i := 0; i < num_student; i++ {
 		var firstname, lastname string
 
 		fmt.Println("Enter first name : ")
 		fmt.Scan(&firstname)
+		fmt.Println(firstname)
 
-		fmt.Println("Enter first name : ")
+		fmt.Println("Enter last name : ")
 		fmt.Scan(&firstname)
-		fullname := firstname + " " + lastname
-		student = append(student, fullname)
+		full_name := firstname + " " + lastname
+		fmt.Println(full_name)
+		student = append(student, full_name)
 	}
 
 	fmt.Println(student)
+	fmt.Println(len(student))
+	fmt.Println(cap(student))
 
 	// fmt.Println("Enter first name : ")
 	// fmt.Scan(&firstname)
