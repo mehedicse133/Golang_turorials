@@ -5,7 +5,7 @@ import "fmt"
 func main() {
 	fmt.Println("This is arry module")
 
-	// staic array
+	// array length is definde, staic array
 	var animals [3]string
 
 	animals[0] = "Dog"
@@ -19,6 +19,11 @@ func main() {
 	fmt.Println("The student list are :", student)
 	fmt.Println("The lenth of student array is :", len(student))
 	fmt.Println("The capacity  of student  arry is:", cap(student))
+
+	// array length is undefined
+	arr1 := [...]int{10, 20, 30, 40, 50, 60, 50}
+	arr_slice := arr1[4:]
+	fmt.Println("The arry lices values are : ", arr_slice)
 
 	// arry print using loop
 	var a = [5]string{"a", "b", "c"}
