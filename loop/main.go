@@ -84,12 +84,10 @@ func for_loop_with_range() {
 	for index, vale := range animal {
 		fmt.Println(index, vale)
 	}
-
 	// Print vales without indexs
 	for _, vale := range animal {
 		fmt.Println(vale)
 	}
-
 	// Print indexs with out values
 	for index, _ := range animal {
 		fmt.Println(index)
