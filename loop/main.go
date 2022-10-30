@@ -57,4 +57,19 @@ func main() {
 	fmt.Println(odd)
 	fmt.Println(odd_sum)
 
+	// nested for loop using function
+	nested_for_loop()
+
+}
+
+func nested_for_loop() {
+
+	color := [...]string{"blue", "black"}
+	wears := [...]string{"Tshirt", "polo_thirt"}
+
+	for i := 0; i < len(color); i++ {
+		for j := 0; j < len(wears); j++ {
+			fmt.Println(color[i], wears[j])
+		}
+	}
 }
