@@ -60,6 +60,9 @@ func main() {
 	// nested for loop using function
 	nested_for_loop()
 
+	// loop used range keyword
+	for_loop_with_range()
+
 }
 
 func nested_for_loop() {
@@ -71,5 +74,24 @@ func nested_for_loop() {
 		for j := 0; j < len(wears); j++ {
 			fmt.Println(color[i], wears[j])
 		}
+	}
+}
+
+func for_loop_with_range() {
+	animal := [4]string{"Dog", "cat", "Tiger", "Lion"}
+
+	// Print both indexs and values
+	for index, vale := range animal {
+		fmt.Println(index, vale)
+	}
+
+	// Print vales without indexs
+	for _, vale := range animal {
+		fmt.Println(vale)
+	}
+
+	// Print indexs with out values
+	for index, _ := range animal {
+		fmt.Println(index)
 	}
 }
