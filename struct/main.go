@@ -23,6 +23,7 @@ type student_list struct {
 
 func (slist *student_list) add_student(s student) {
 	slist.students_list = append(slist.students_list, s)
+	//	slist.students_list =
 }
 
 func (s *student) get_student_id() int {
@@ -61,6 +62,7 @@ func main() {
 	s := student_list{}
 	s.add_student(s1)
 	s.add_student(s2)
+	// fmt.Println(s1)
 
 	fmt.Println(s.students_list)
 	fmt.Println("Length of slice students list : ", len(s.students_list))
