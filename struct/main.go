@@ -25,6 +25,18 @@ func (slist *student_list) add_student(s student) {
 	slist.students_list = append(slist.students_list, s)
 }
 
+func (s *student) get_student_id() int {
+	return s.id
+}
+
+func (s *student) edit_name(name string) {
+	s.name = name
+}
+
+func (s *student) get_name() string {
+	return s.name
+}
+
 func main() {
 
 	//created object of student struct
@@ -52,5 +64,14 @@ func main() {
 
 	fmt.Println(s.students_list)
 	fmt.Println("Length of slice students list : ", len(s.students_list))
+	fmt.Println("--------------------------------")
+
+	// use edit_name func and get stusdnet_id func
+	s1.edit_name("Subbir")
+	fmt.Println(s1)
+
+	fmt.Println("--------------------------------")
+	fmt.Println(s1.get_student_id())
+	fmt.Println(s1.get_name())
 
 }
