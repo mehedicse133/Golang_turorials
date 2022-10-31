@@ -11,6 +11,12 @@ type student struct {
 	email   string
 }
 
+func details_student(s student) {
+	fmt.Println("Details of student:", s.name)
+	fmt.Printf("id = %v\nname = %v\nage = %v\ncity =  %v\naddress = %v\nemail = %v", s.id, s.name, s.age, s.city, s.address, s.email)
+	fmt.Println()
+}
+
 func main() {
 
 	//var student_list []string
@@ -20,4 +26,9 @@ func main() {
 	fmt.Println(s1.name)
 	fmt.Println(s2.name)
 	fmt.Println(s1, s2)
+	fmt.Println()
+
+	details_student(s1)
+
+	details_student(s2)
 }
