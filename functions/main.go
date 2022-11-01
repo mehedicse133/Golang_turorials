@@ -9,21 +9,39 @@ func main() {
 	sum := sum(2, 3)
 	sub := sub(2, 3)
 	div := div(0, 0)
-	variodic := variodic(2, 3, 3, 4)
 
 	fmt.Println(sum)
 	fmt.Println(sub)
 	fmt.Println(div)
+	print_line()
+
+	variodic := variodic(2, 3, 3, 4)
 	fmt.Println(variodic)
+	print_line()
 
 	num_ := -8
 	fmt.Println(square(num_))
+	print_line()
+
+	// Pass by value and multi values return
+	name, phone := multi_value_return("Mehedi", 222222)
+	fmt.Println(name, phone)
+	print_line()
+
+	// Ignore returnde values form fumctions using _
+	name, _ = multi_value_return("amam", 8888888)
+	fmt.Println(name)
+	print_line()
+
+	// Ignore returnde values form fumctions using _
+	_, phone = multi_value_return("amam", 8888888)
+	fmt.Println(phone)
+	print_line()
 
 }
 
 func sum(a int, b int) int {
 	r := a + b
-
 	return r
 }
 
@@ -61,4 +79,12 @@ func square(num int) int {
 		return -1
 	}
 	return num * num
+}
+
+func multi_value_return(name string, phone int) (string, int) {
+	return name, phone
+}
+
+func print_line() {
+	fmt.Println("--------------------------------")
 }
