@@ -6,12 +6,14 @@ import "fmt"
 func main() {
 	fmt.Println("welcome to functions")
 
-	sum := sum(2, 3)
-	sub := sub(2, 3)
+	sum := sum(2, 50)
+	sub := sub(8, 3)
 	div := div(0, 0)
 
-	fmt.Println(sum)
-	fmt.Println(sub)
+	//fmt.Println(sum)
+	print(sum)
+	print(sub)
+	// fmt.Println(sub)
 	fmt.Println(div)
 	print_line()
 
@@ -87,4 +89,11 @@ func multi_value_return(name string, phone int) (string, int) {
 
 func print_line() {
 	fmt.Println("--------------------------------")
+}
+
+func print(values ...int) {
+	for _, val := range values {
+		fmt.Println(val)
+	}
+
 }
