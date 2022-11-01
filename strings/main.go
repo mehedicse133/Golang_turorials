@@ -33,6 +33,7 @@ func main() {
 	char_volume_count := strings.Count(str2, "e")
 	fmt.Println(char_volume_count)
 
+	// using string join method
 	s_str := []string{"My ", "name", "is"}
 	// g := uuuu[1:]
 	// fmt.Println(g)
@@ -53,5 +54,13 @@ func main() {
 
 	}
 	fmt.Println(name_list) //Output is [me ta am su]
+
+	// using Field method split the string which work on based os white space
+	lorem_string := "Lorem ipsum dolor sit amet, consectetur adipiscing elit. sed do eiusmod tempor."
+	l_string := strings.Fields(lorem_string)
+	fmt.Println(len(l_string))
+	for _, l := range l_string {
+		fmt.Println(l)
+	}
 
 }
