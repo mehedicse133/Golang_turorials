@@ -6,16 +6,13 @@ import "fmt"
 func main() {
 	fmt.Println("welcome to functions")
 
-	sum := sum(2, 50)
-	sub := sub(8, 3)
-	div := div(0, 0)
+	sum_value, str := sum(2, 50)
+	sub_value, str2 := sub(8, 3)
+	div := div(8, 2)
 
-	//fmt.Println(sum)
+	print(sum_value, str)  // using custom print function
+	print(sub_value, str2) // using custom print function
 
-	print(sum) // using custom print function
-	print(sub) // using custom print function
-
-	// fmt.Println(sub)
 	fmt.Println(div)
 	print_line()
 
@@ -44,9 +41,14 @@ func main() {
 
 }
 
-func sum(a int, b int) int {
+func sum(a int, b int) (int, string) {
 	r := a + b
-	return r
+	return r, "The summation of a and b is : "
+}
+
+func sub(a int, b int) (int, string) {
+	r := a - b
+	return r, "The result of substraction a and b is :"
 }
 
 func variodic(values ...int) int {
@@ -54,11 +56,6 @@ func variodic(values ...int) int {
 	for _, value := range values {
 		r += value
 	}
-	return r
-}
-
-func sub(a int, b int) int {
-	r := a - b
 	return r
 }
 
@@ -93,9 +90,12 @@ func print_line() {
 	fmt.Println("--------------------------------")
 }
 
-func print(values ...int) {
-	for _, val := range values {
-		fmt.Println(val)
-	}
+func print(val int, str string) {
+	fmt.Println(str, val)
+
+	// for _, val := range values {
+	// 	fmt.Println(str,val)
+
+	// }
 
 }
