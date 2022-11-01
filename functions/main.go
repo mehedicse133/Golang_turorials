@@ -11,8 +11,10 @@ func main() {
 	div := div(0, 0)
 
 	//fmt.Println(sum)
-	print(sum)
-	print(sub)
+
+	print(sum) // using custom print function
+	print(sub) // using custom print function
+
 	// fmt.Println(sub)
 	fmt.Println(div)
 	print_line()
