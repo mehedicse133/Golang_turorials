@@ -33,11 +33,10 @@ func main() {
 	char_volume_count := strings.Count(str2, "e")
 	fmt.Println(char_volume_count)
 
-	//str := "My name is Mehedi"
-	uuuu := []string{"foo", "bar", "baz"}
+	s_str := []string{"My ", "name", "is"}
 	// g := uuuu[1:]
 	// fmt.Println(g)
-	fmt.Println(strings.Join(uuuu, "-"))
+	fmt.Println(strings.Join(s_str, "-"))
 
 	mystr := "mehe@gmai.com"
 	split_mystr := strings.Split(mystr, "@")
@@ -50,9 +49,9 @@ func main() {
 	for _, email := range emaillist {
 		split_name := strings.Split(email, "@")
 		name := split_name[0]
-		name_list = append(name_list, name) //Output is [me ta am su]
+		name_list = append(name_list, name)
 
 	}
-	fmt.Println(name_list)
+	fmt.Println(name_list) //Output is [me ta am su]
 
 }
