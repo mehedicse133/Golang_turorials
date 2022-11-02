@@ -62,7 +62,12 @@ func variable_type_check() {
 	fmt.Printf("Name is %v and\n%v years old\n", name, age)
 	fmt.Printf("Name type is :  %T\n", name)
 	fmt.Printf("Age type is :  %T\n", age)
-	fmt.Printf("Merital Status  is :  %T", is_meried)
-	fmt.Printf("Car Price type is :  %T", car_price)
+	fmt.Printf("Merital Status  is:  %T\n", is_meried)
+	fmt.Printf("Car Price type is :  %T\n", car_price)
+
+	v := 20
+	var p = 30
+	fmt.Printf("p is type is %T\n", p)
+	fmt.Printf("v is type is %T\n", v)
 
 }
