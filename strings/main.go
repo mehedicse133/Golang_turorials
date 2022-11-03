@@ -58,17 +58,7 @@ func main() {
 	print_line()
 
 	// using Field() method split the string which work on based os white space
-	lorem_string := "Lorem ipsum dolor sit amet, consectetur Lorem adipiscing elit. sed do eiusmod tempor."
-	l_string := strings.Fields(lorem_string)
-	fmt.Println(l_string)
-
-	fmt.Printf("Type of l_string is %T\n", l_string)
-
-	for _, l := range l_string {
-		fmt.Println(l)
-	}
-	fmt.Println(len(l_string))
-	print_line()
+	field_method()
 
 	// use count() method calculate and return perticular pattern how many times exists.
 	count_method()
@@ -88,17 +78,31 @@ func count_method() {
 func has_prefix_method() {
 	lorem_string := "Lorem ipsum dolor sit amet, consectetur Lorem adipiscing elit. sed do eiusmod tempor."
 	l_string := strings.Fields(lorem_string)
-	var uu []string
+	var work_list []string
 	var word_count = 0
 	for _, l := range l_string {
 		if strings.HasPrefix(l, "Lo") {
 			word_count += 1
-			uu = append(uu, l)
+			work_list = append(work_list, l)
 		}
 	}
-	fmt.Println(uu)
+	fmt.Println(work_list)
 	fmt.Println(word_count)
-	fmt.Println(len(uu))
+	fmt.Println(len(work_list))
+	print_line()
+}
+
+func field_method() {
+	lorem_string := "Lorem ipsum dolor sit amet, consectetur Lorem adipiscing elit. sed do eiusmod tempor."
+	l_string := strings.Fields(lorem_string)
+	fmt.Println(l_string)
+
+	fmt.Printf("Type of l_string is %T\n", l_string)
+
+	for _, l := range l_string {
+		fmt.Println(l)
+	}
+	fmt.Println(len(l_string))
 	print_line()
 }
 
