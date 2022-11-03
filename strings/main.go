@@ -8,39 +8,25 @@ import (
 func main() {
 	fmt.Println("welcome to String")
 
+	// string variable diclare and value assign
 	var s string = "string string string gggg"
-	fmt.Println(s)
-
 	var str string
 	str = "Mehedi"
+	str2 := "hossain"
+
+	fmt.Println(s)
+	fmt.Println(str2)
 	fmt.Println("String is : ", str)
+	print_line()
 
 	// using string Split Method
 	split_method()
 
 	// using string Replace method
-	str2 := "Mehedi Hosain"
-	v := strings.Replace(str2, "e", "a", 2)
-	fmt.Println(v)
-
-	y := strings.Split(str2, "")
-	fmt.Println(y)
-
-	// using string Count method
-	char_volume_count := strings.Count(str2, "e")
-	fmt.Println(char_volume_count)
+	replace_method()
 
 	// using string join method
-	s_str := []string{"My ", "name", "is"}
-	// g := uuuu[1:]
-	// fmt.Println(g)
-	fmt.Println(strings.Join(s_str, "-"))
-
-	mystr := "mehe@gmai.com"
-	split_mystr := strings.Split(mystr, "@")
-	take_name := split_mystr[0]
-	fmt.Println(take_name)
-	print_line()
+	join_method()
 
 	// Name collect form list of email using string split() method
 	name_extract_form_emails()
@@ -61,6 +47,11 @@ func count_method() {
 	count := strings.Count(str, "Lorem")
 	fmt.Println(count)
 	print_line()
+
+	// // using string Count method
+	// str2 := "Mehedi"
+	// char_volume_count := strings.Count(str2, "e")
+	// fmt.Println(char_volume_count)
 }
 
 func split_method() {
@@ -69,6 +60,23 @@ func split_method() {
 	for i := 0; i < len(split_str); i++ {
 		fmt.Println("Split string char is : ", split_str[i])
 	}
+	print_line()
+	// y := strings.Split(str2, "")
+	// fmt.Println(y)
+}
+
+func replace_method() {
+	str := "Mehedi Hosain"
+	r_str := strings.Replace(str, "e", "a", 2)
+	fmt.Println(r_str)
+	print_line()
+}
+
+func join_method() {
+	s_str := []string{"My", "name", "is"}
+	join_str := strings.Join(s_str, "-")
+	fmt.Println(join_str)
+	print_line()
 }
 
 func has_prefix_method() {
@@ -112,6 +120,18 @@ func name_extract_form_emails() {
 
 	}
 	fmt.Println("Output os Extract name list form email:", name_list) //Output is [me ta am su]
+	print_line()
+}
+
+func string_declare_and_value_assign() {
+	var s string = "string string string gggg"
+	var str string
+	str = "Mehedi"
+	str2 := "hossain"
+
+	fmt.Println(s)
+	fmt.Println(str2)
+	fmt.Println("String is : ", str)
 	print_line()
 }
 
