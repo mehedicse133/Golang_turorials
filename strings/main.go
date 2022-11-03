@@ -45,7 +45,7 @@ func main() {
 	fmt.Println(take_name)
 	print_line()
 
-	// Name collect form list of email using string split method
+	// Name collect form list of email using string split() method
 	emaillist := []string{"me@gmail.com", "ta@gmail.com", "am@gmail.com", "su@gmail.com"}
 	var name_list []string
 	for _, email := range emaillist {
@@ -57,7 +57,7 @@ func main() {
 	fmt.Println("Output os Extract name list form email:", name_list) //Output is [me ta am su]
 	print_line()
 
-	// using Field method split the string which work on based os white space
+	// using Field() method split the string which work on based os white space
 	lorem_string := "Lorem ipsum dolor sit amet, consectetur Lorem adipiscing elit. sed do eiusmod tempor."
 	l_string := strings.Fields(lorem_string)
 	fmt.Println(l_string)
@@ -70,9 +70,24 @@ func main() {
 	fmt.Println(len(l_string))
 	print_line()
 
-	// use count method calculate and return perticular pattern how many times exists.
-	CountMethod()
+	// use count() method calculate and return perticular pattern how many times exists.
+	count_method()
 
+	//use HasPrefix()
+	has_prefix_method()
+
+}
+
+func count_method() {
+	str := "Lorem ipsum dolor sit amet, consectetur Lorem adipiscing elit."
+	count := strings.Count(str, "Lorem")
+	fmt.Println(count)
+	print_line()
+}
+
+func has_prefix_method() {
+	lorem_string := "Lorem ipsum dolor sit amet, consectetur Lorem adipiscing elit. sed do eiusmod tempor."
+	l_string := strings.Fields(lorem_string)
 	var uu []string
 	var word_count = 0
 	for _, l := range l_string {
@@ -84,13 +99,6 @@ func main() {
 	fmt.Println(uu)
 	fmt.Println(word_count)
 	fmt.Println(len(uu))
-	print_line()
-}
-
-func CountMethod() {
-	str := "Lorem ipsum dolor sit amet, consectetur Lorem adipiscing elit."
-	count := strings.Count(str, "Lorem")
-	fmt.Println(count)
 	print_line()
 }
 
