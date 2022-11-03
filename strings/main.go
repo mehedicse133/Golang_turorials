@@ -8,7 +8,7 @@ import (
 func main() {
 	fmt.Println("welcome to String")
 
-	var s string = "string"
+	var s string = "string string string gggg"
 	fmt.Println(s)
 
 	var str string
@@ -43,6 +43,7 @@ func main() {
 	split_mystr := strings.Split(mystr, "@")
 	take_name := split_mystr[0]
 	fmt.Println(take_name)
+	print_line()
 
 	// Name collect form list of email using string split method
 	emaillist := []string{"me@gmail.com", "ta@gmail.com", "am@gmail.com", "su@gmail.com"}
@@ -53,14 +54,46 @@ func main() {
 		name_list = append(name_list, name)
 
 	}
-	fmt.Println(name_list) //Output is [me ta am su]
+	fmt.Println("Output os Extract name list form email:", name_list) //Output is [me ta am su]
+	print_line()
 
 	// using Field method split the string which work on based os white space
-	lorem_string := "Lorem ipsum dolor sit amet, consectetur adipiscing elit. sed do eiusmod tempor."
+	lorem_string := "Lorem ipsum dolor sit amet, consectetur Lorem adipiscing elit. sed do eiusmod tempor."
 	l_string := strings.Fields(lorem_string)
-	fmt.Println(len(l_string))
+	fmt.Println(l_string)
+
+	fmt.Printf("Type of l_string is %T\n", l_string)
+
 	for _, l := range l_string {
 		fmt.Println(l)
 	}
+	fmt.Println(len(l_string))
+	print_line()
 
+	// use count method calculate and return perticular pattern how many times exists.
+	CountMethod()
+
+	var uu []string
+	var word_count = 0
+	for _, l := range l_string {
+		if strings.HasPrefix(l, "Lo") {
+			word_count += 1
+			uu = append(uu, l)
+		}
+	}
+	fmt.Println(uu)
+	fmt.Println(word_count)
+	fmt.Println(len(uu))
+	print_line()
+}
+
+func CountMethod() {
+	str := "Lorem ipsum dolor sit amet, consectetur Lorem adipiscing elit."
+	count := strings.Count(str, "Lorem")
+	fmt.Println(count)
+	print_line()
+}
+
+func print_line() {
+	fmt.Println("--------------------------------")
 }
