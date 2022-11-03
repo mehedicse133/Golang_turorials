@@ -20,7 +20,7 @@ type PageData struct {
 }
 
 func todo(w http.ResponseWriter, r *http.Request) {
-	tmpl = template.Must(template.ParseFiles("templates/home.html"))
+	tmpl = template.Must(template.ParseFiles("Todoapp/templates/home.html"))
 	data := PageData{
 		Title: "Todo list",
 		Todos: []Todo{
