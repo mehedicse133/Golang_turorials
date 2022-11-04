@@ -1,9 +1,12 @@
 package main
 
+//https://www.youtube.com/watch?v=SonwZ6MF5BE
 import (
 	"encoding/json"
 	"log"
+	"math/rand"
 	"net/http"
+	"strconv"
 
 	"github.com/gorilla/mux"
 )
@@ -40,13 +43,41 @@ func getbook(w http.ResponseWriter, r *http.Request) {
 
 }
 func addbook(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-type", "application/json")
+	var book Book
+	_ = json.NewDecoder(r.Body).Decode(&book)
+	book.ID = strconv.Itoa(rand.Intn(10000000))
+	books = append(books, book)
+	json.NewEncoder(w).Encode(book)
 
 }
-func updatebook(w http.ResponseWriter, r *http.Request) {
 
+func updatebook(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-type", "application/jsom")
+	id := mux.Vars(r)
+	for index, item := range books {
+		if item.ID == id["id"] {
+			books = append(books[:index], books[index+1:]...)
+			var book Book
+			_ = json.NewDecoder(r.Body).Decode(&book)
+			book.ID = id["id"]
+			books = append(books, book)
+			json.NewEncoder(w).Encode(book)
+			return
+		}
+	}
+	json.NewEncoder(w).Encode(books)
 }
 func deletebook(w http.ResponseWriter, r *http.Request) {
-
+	w.Header().Set("Content-type", "application/jsom")
+	id := mux.Vars(r)
+	for index, item := range books {
+		if item.ID == id["id"] {
+			books = append(books[:index], books[index+1:]...)
+			break
+		}
+	}
+	json.NewEncoder(w).Encode(books)
 }
 
 func main() {
