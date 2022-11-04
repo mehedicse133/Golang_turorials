@@ -1,6 +1,5 @@
 package main
 
-//https://www.youtube.com/watch?v=SonwZ6MF5BE
 import (
 	"encoding/json"
 	"log"
