@@ -12,11 +12,11 @@ func main() {
 	defer fmt.Println("B")
 	defer fmt.Println("C")
 
-	j := panicc("amam0", "tanvir", "subbir")
-	fmt.Println(j)
+	team1 := panicc("amam0", "tanvir", "mehedi", "subbir")
+	fmt.Println(team1)
 
-	u := panicc("anik", "mamun", "rabbi")
-	fmt.Println(u)
+	team2 := panicc("anik", "mamun", "rabbi")
+	fmt.Println(team2)
 }
 
 func panicc(names ...string) []string {
