@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"io"
+	"io/ioutil"
 	"os"
 )
 
@@ -22,5 +23,15 @@ func main() {
 	}
 	fmt.Println(l)
 	defer file.Close()
+	readfile("./myfile.txt")
+
+}
+
+func readfile(filename string) {
+	data, err := ioutil.ReadFile(filename)
+	if err != nil {
+		panic(err)
+	}
+	fmt.Println("The file outoput is : ", string(data))
 
 }
