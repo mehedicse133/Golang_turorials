@@ -20,6 +20,8 @@ func main() {
 	fmt.Println(s)
 
 	arr()
+
+	fmt.Println("hi")
 }
 
 func arr() {
