@@ -40,4 +40,15 @@ func main() {
 		fmt.Println()
 	}
 
+	var k int
+	k = 1
+	for i := 0; i <= 4; i++ {
+		for j := 1; j <= i; j++ {
+			fmt.Printf(strconv.Itoa(k) + " ")
+			k = k + 1
+		}
+		fmt.Println()
+
+	}
+
 }
